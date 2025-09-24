@@ -1,0 +1,34 @@
+.banner-card-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 12px;
+    height: 250px;
+    border-radius: 8px;
+    position: relative;
+    color: #FFF;
+}
+
+.banner-card-item::before,
+.banner-card-item::after {
+    position: absolute;
+    content: '';
+    background-image: url('../../assets/vector1.png');
+    inset: 0;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.banner-card-item::after {
+    transform: scaleX(-1);
+}
+
+.banner-card-item.blue-effect {
+    background: linear-gradient(125.04deg, #632EE3 5.68%, #9F62F2 88.38%);
+}
+
+.banner-card-item.green-effect {
+    background: linear-gradient(90deg, #54CF68 9.6%, #00827A 92.23%);
+}
