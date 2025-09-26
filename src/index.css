@@ -23,3 +23,25 @@ body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+.social-icons-link {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.social-icons {
+  background-color: #FFF;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  border-radius: 1rem;
+  padding: .25rem;
+  font-size: .75rem;
+}
