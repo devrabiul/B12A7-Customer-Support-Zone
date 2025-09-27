@@ -154,7 +154,7 @@ function App() {
       <Banners inProgressCount={inProgressCount} resolvedCount={resolvedTasks.length} />
 
       <div className="container mx-auto px-[1rem] pb-[80px]">
-        <div className="grid grid-cols-12 gap-[32px]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-[32px]">
           <div className="col-span-9">
             <CustomerTickets
               ticketsJson={ticketsJson}

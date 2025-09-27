@@ -16,28 +16,38 @@ const CustomerTicketCard = ({ ticket, onSelect }) => {
               ? "status-green"
               : ticket?.status == "In- Progress"
               ? "status-warning"
-              : "status-danger") + ' ticket-card-button'
+              : "status-danger") + " ticket-card-button"
           }
         >
-            <span><FaCircle /></span>
+          <span>
+            <FaCircle />
+          </span>
           {ticket?.status}
         </button>
       </div>
       <p>{ticket?.description}</p>
-      <div className="ticket-footer">
+      <div className="ticket-footer flex-wrap">
         <div className="flex justify-between items-center gap-2">
           <div>#{ticket?.id}</div>
-          <div className={`priority-${ticket?.priority == 'HIGH PRIORITY' ? 'red' : (ticket?.priority == 'MEDIUM PRIORITY' ? 'warning' : 'green')}`}>
+          <div
+            className={`text-nowrap priority-${
+              ticket?.priority == "HIGH PRIORITY"
+                ? "red"
+                : ticket?.priority == "MEDIUM PRIORITY"
+                ? "warning"
+                : "green"
+            }`}
+          >
             {ticket?.priority}
-            </div>
+          </div>
         </div>
-        <div className="flex justify-between items-center gap-2">
-          <div>{ticket?.customer}</div>
-    
-        <div className="flex items-center gap-1">
-        <FaCalendarDays />
-        <span>{ticket?.createdAt}</span>
-        </div>
+        <div className="flex flex-nowrap justify-between items-center gap-2">
+          <div className="text-nowrap">{ticket?.customer}</div>
+
+          <div className="flex items-center gap-1">
+            <FaCalendarDays />
+            <span>{ticket?.createdAt}</span>
+          </div>
         </div>
       </div>
     </div>
