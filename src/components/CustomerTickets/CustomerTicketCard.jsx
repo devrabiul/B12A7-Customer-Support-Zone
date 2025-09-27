@@ -3,18 +3,18 @@ import { FaCalendarDays } from "react-icons/fa6";
 import { FaCircle } from "react-icons/fa6";
 import "./CustomerTicketCard.css";
 
-const CustomerTicketCard = ({ ticket }) => {
+const CustomerTicketCard = ({ ticket, onSelect }) => {
   console.log(ticket);
 
   return (
-    <div className="ticket-card bg-white">
+    <div className="ticket-card bg-white" onClick={() => onSelect(ticket)}>
       <div className="ticket-card-head">
         <h5 className="">{ticket?.title}</h5>
         <button
           className={
             (ticket?.status == "Open"
               ? "status-green"
-              : ticket?.status == "In Progress"
+              : ticket?.status == "In- Progress"
               ? "status-warning"
               : "status-danger") + ' ticket-card-button'
           }

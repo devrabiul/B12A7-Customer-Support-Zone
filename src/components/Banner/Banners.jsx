@@ -1,7 +1,7 @@
 import React from 'react';
 import './Banners.css'
 
-const Banners = () => {
+const Banners = ({ inProgressCount, resolvedCount }) => {
     return (
         <div>
             <div className="container mx-auto py-[80px] px-[1rem]">
@@ -11,7 +11,7 @@ const Banners = () => {
                             In-Progress
                         </div>
                         <div className='text-[60px] font-bold'>
-                            0
+                            { inProgressCount }
                         </div>
                     </div>
                     <div className="green-effect p-4 rounded min-h-[250px] banner-card-item">
@@ -19,7 +19,7 @@ const Banners = () => {
                             Resolved
                         </div>
                         <div className='text-[60px] font-bold'>
-                            0
+                            { resolvedCount }
                         </div>
                     </div>
                 </div>
